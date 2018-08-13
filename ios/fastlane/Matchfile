@@ -1,0 +1,8 @@
+
+git_url("git@git.hualala.com:zhouce/mobile_app_certs.git")
+git_branch("testFastlane")
+type("development")     # The default type, can be: appstore, adhoc, enterprise or development
+app_identifier('reactnative.testFastlane.app')# ?????????????????deviceID
+username("fengwang2018@gmail.com") # Your Apple Developer Portal username
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options

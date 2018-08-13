@@ -1,0 +1,32 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :beta do
+    build_app(scheme: "testFastlane",
+              #workspace: "project.xcworkspace",
+              export_method:'development',
+              clean:true,
+              output_directory: "/Users/hll_mall/Desktop",
+              output_name: "testFastlane.ipa",
+              include_bitcode: true)
+    pgyer(api_key: "c696f2d87488f3584ffc2d602b91206e", user_key: "3ed4568762debe782d795cd153604e96",
+          update_description:"?????? ??fastlane??????"
+    )
+  end
+end
